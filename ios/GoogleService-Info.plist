@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>598925352557-ov4puq1r4reks3fbe1v7p7hfi43qlecj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.598925352557-ov4puq1r4reks3fbe1v7p7hfi43qlecj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDDwyZ0xleFF6IkWighNK_wId95-VBLEFY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>598925352557</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>de.sharable.ios.daimler-seat-reservation</string>
+	<key>PROJECT_ID</key>
+	<string>daimler-seat-reservation</string>
+	<key>STORAGE_BUCKET</key>
+	<string>daimler-seat-reservation.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:598925352557:ios:74853599e4150a11722964</string>
+</dict>
+</plist>
