@@ -11,6 +11,10 @@ class Constants {
       'More than one document for the users uid found!';
   static const unexpectedRole = 'Unexpected User role found!';
 
+  static const noConnectionError = "Keine Internetverbindung vorhanden!";
+  static const loginTimeoutError =
+      "Zeitüberschreitung von 10 sekunden beim Verbinden zum Server!";
+
   // --- MyApp ---
   static const connectingToFirebase = 'Verbinde mit Firebase...';
   static const deletingOldReservations = 'Lösche vergangene reservationen...';

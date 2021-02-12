@@ -37,10 +37,18 @@ class Authentication {
 
   Future<dynamic> login(String email, String password) async {
     try {
-      UserCredential userCredential = await auth.signInWithEmailAndPassword(
+      UserCredential userCredential = await auth
+          .signInWithEmailAndPassword(
         email: email,
         password: password,
-      );
+      )
+          .timeout(Duration(seconds: 10), onTimeout: () {
+        return null;
+      });
+
+      if (userCredential == null) {
+        throw new TimeoutException("");
+      }
 
       String displayName = await getUserDisplayName(userCredential.user.uid);
       await userCredential.user.updateProfile(displayName: displayName);
@@ -52,15 +60,25 @@ class Authentication {
     } on FirebaseAuthException catch (e) {
       print(e.message);
       return e;
+    } on TimeoutException catch (e) {
+      return e;
     }
   }
 
   Future<dynamic> signUp(String name, String email, String password) async {
     try {
-      UserCredential userCredential = await auth.createUserWithEmailAndPassword(
+      UserCredential userCredential = await auth
+          .createUserWithEmailAndPassword(
         email: email,
         password: password,
-      );
+      )
+          .timeout(Duration(seconds: 10), onTimeout: () {
+        return null;
+      });
+
+      if (userCredential == null) {
+        throw new TimeoutException("");
+      }
 
       await userCredential.user.updateProfile(displayName: name);
       await userCredential.user.reload();
@@ -69,6 +87,8 @@ class Authentication {
       return MyUser(auth.currentUser, UserRole.STANDARD);
     } on FirebaseAuthException catch (e) {
       print(e.message);
+      return e;
+    } on TimeoutException catch (e) {
       return e;
     }
   }
